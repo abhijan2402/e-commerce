@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        
+        
+
+    <style>
+        .main{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+            background: #fafafa;
+            height: 60px;
+            width: 100%;
+        }
+        label.logo{
+            color: rgb(0, 0, 0);
+            font-size: 35px;
+            line-height: 58px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+        nav ul{
+            
+            float: right;
+            list-style: none;
+            margin-right: 20px;
+           
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 58px;
+            
+            
+            
+        }
+        nav ul li a{
+           color: rgb(26, 14, 14);
+           font-size: 17px;
+           padding: 7px 18px;
+           border-radius: 5px;
+           text-transform: uppercase;
+           text-decoration: none;
+        }
+        nav ul li a:hover{
+            background-color: black;
+            color: white;
+        }
+        a.active,a:hover{
+            
+           
+            transition: .5s;
+        }
+        .checkbtn{
+            font-size: 30px;
+            color: rgb(26, 19, 19);
+            float: right;
+            line-height: 58px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        @media (max-width : 952px) {
+            label.logo{
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            nav ul li a{
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 858px) {
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #20466d;
+                top: 60px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a:hover ,a.active{
+                background: none;
+                color: #0082e6;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+        #check{
+            display: none;
+
+        }
+        .header{
+            background-image: url(main_img2.jpg);
+            background-repeat: none;
+            background-size: cover;
+            height: 15cm;
+            border: 1px solid black;
+            width: 100%;
+            margin-top: 0.3cm;
+
+        }
+        .header-1{
+            font-size: 50px;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            margin-top: 1cm;
+        }
+        .header-2{
+            font-size: 32px;
+            text-align: center;
+        }
+        
+
+
+
+        .coursel {
+            font-size: 48px;
+            font-weight: bolder;
+        }
+
+        .mid {
+            display: block;
+            text-align: center;
+
+            margin-top: 1cm;
+
+
+            animation: 2s ease-in-out 0s slideInleft;
+
+        }
+
+        @keyframes slideInleft {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .mid-1 {
+
+
+
+            margin: auto;
+            height: 12cm;
+            width: 49%;
+            display: inline-block;
+            flex-direction: row;
+
+
+
+
+        }
+
+        .mid-3 {
+            margin: auto;
+            align-content: center;
+
+        }
+
+        .img {
+
+            text-align: center;
+            display: block;
+            margin: auto;
+            border-radius: 20px;
+            justify-content: center;
+            width: 450px;
+            height: 300px;
+            box-shadow: 20px 50px 50px yellow;
+            align-items: center;
+        }
+
+        .mid-1-1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 1cm;
+
+        }
+
+        .inner-mid {
+            text-align: center;
+            font-size: 50px;
+            text-transform: uppercase;
+            font-family: monospace;
+            text-decoration: underline;
+        }
+
+        .menu {
+
+            font-size: 30px;
+            text-transform: capitalize;
+
+        }
+
+        .menu-1 {
+            text-align: center;
+            margin-bottom: 1cm;
+        }
+
+        .menu-2 {
+            display: inline-block;
+            flex-direction: row;
+            width: 32%;
+            text-align: center;
+
+            margin-bottom: 1cm;
+        }
+
+        .menu-3 {
+            font-size: 20px;
+        }
+
+        .price {
+            font-size: 20px;
+        }
+
+        .btn {
+            border: 1px solid rgb(0, 0, 0);
+            background: red;
+            border-radius: 10px;
+            color: white;
+
+            padding-left: 15px;
+            padding-right: 15px;
+            text-transform: capitalize;
+        }
+
+        .btn:hover {
+            background: rgb(240, 58, 45);
+            color: rgb(255, 254, 254);
+        }
+
+        .summary {
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 1cm;
+        }
+
+        .summary:hover {
+            color: red;
+            text-decoration: underline;
+            font-size: 25.3px;
+        }
+
+        .footer {
+            background: rgb(10, 54, 112);
+        }
+
+        .footer-main {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .inner-footer {
+            color: white;
+            text-align: center;
+            margin: auto;
+            width: 50%;
+            font-size: 20px;
+            margin-bottom: 0.5cm;
+            ;
+        }
+
+        .img-1 {
+            width: 40px;
+            height: 40px;
+
+            margin-right: 1cm;
+        }
+
+        .footer-image {
+
+            text-align: center;
+            margin: auto;
+
+
+            width: 40%;
+        }
+
+        .inner-footer1 {
+            font-size: 30px;
+            color: white;
+            text-align: center;
+
+            margin: auto;
+            width: 40%;
+            padding-right: 25px;
+            margin-bottom: 1cm;
+            margin-top: 0.5cm;
+        }
+
+        @media screen and (max-width : 600px) and (min-width: 200px) {
+            .img {
+                width: 200px;
+                height: 150px;
+                text-align: center;
+                box-shadow: 20px 30px 30px yellow;
+            }
+            .inner-header{
+                width: 23%;
+            }
+
+            .li {
+                font-size: 13px;
+            }
+
+            .img-2 {
+                width: 2.3cm;
+                height: 2.5cm;
+            }
+
+            .menu-3 {
+                font-size: 12px;
+            }
+
+            .price {
+                font-size: 15px;
+            }
+
+            .btn {
+
+                font-size: 12px;
+                padding-left: 8px;
+                padding-right: 8px;
+
+            }
+
+            .menu-2 {
+
+                width: 31.4%;
+
+            }
+
+            .summary {
+                font-size: 17px;
+                margin-bottom: 0.5cm;
+            }
+
+            .summary:hover {
+                font-size: 18px;
+            }
+
+            .mid-1-1 {
+                font-size: 15px;
+                margin-bottom: 1cm;
+            }
+
+            .mid-1 {
+                height: 5.8cm;
+                display: block;
+                width: 55%;
+            }
+
+            .inner-mid {
+
+                font-size: 25px;
+                margin-bottom: 0.5cm;
+
+            }
+
+            .menu-1 {
+                font-size: 25px;
+            }
+
+            .footer-main {
+                font-size: 20px;
+            }
+
+            .inner-footer {
+                font-size: 15px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .img-1 {
+                width: 35px;
+                height: 35px;
+                margin-right: 0.2cm;
+
+            }
+            .footer-image{
+                width: 50%;
+            }
+
+            .inner-footer1 {
+                font-size: 21px;
+                width: 45%;
+                padding-right: 5px;
+                margin-bottom: 0.1cm;
+                margin-top: 0.3cm;
+            }
+            .coursel{
+                font-size: 25px;
+            }
+
+
+        }
+        @media screen and (max-width : 1000px) and (min-width: 600px) {
+            .img {
+                width: 280px;
+                height: 250px;
+                text-align: center;
+                box-shadow: 20px 30px 20px yellow;
+            }
+            .mid-1-1 {
+                font-size: 21px;
+                margin-bottom: 1cm;
+            }
+            .inner-mid {
+
+font-size: 35px;
+margin-bottom: 0.5cm;
+
+}
+.mid-1{
+    height: 8.5cm;
+}
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Spectro X</label>
+        <ul>
+            <li><a class="active" href="#">Home</a> </li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a> </li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">feedback</a></li>
+        </ul>
+    </nav>
+  
+    <div class="header">
+        <div class="header-1">fashion</div>
+        <div class="header-2">UPTO 60% OFF </div>
+    </div>
+    <div class="mid">
+        <div class="inner-mid">services</div>
+        <div class="mid-1">
+            <img src="delivery.jpg" class="img">
+            <div class="mid-1-1">free delivery on orders above 500</div>
+        </div>
+        <div class="mid-1">
+            <img src="payment.png" class="img">
+
+            <div class="mid-1-1">all type of payment are accepted</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="menu-1">clothing</div>
+
+        <div>
+            <div class="menu-2">
+                <img src="jacket-1.jpeg" class="img-2">
+                <p class="menu-3">HERE&NOW<br>Full Sleeve Solid Men Jacket</p>
+                <b class="price">rs- 1050/- <button class="btn">add to cart</button></b>
+            </div>
+            <div class="menu-2">
+                <img src="blazers.jpeg" class="img-2">
+                <p class="menu-3">WROGN<br>Full Sleeve Men Casual Jacket</p>
+                <b class="price">rs- 1899/- <button class="btn">add to cart</button></b>
+            </div>
+            <div class="menu-2">
+                <img src="jacket-2.jpeg" class="img-2">
+                <p class="menu-3">PUMA<br>Full Sleeve Men Casual Jacket</p>
+                <b class="price">rs- 2999/- <button class="btn">add to cart</button></b>
+            </div>
+        </div>
+        <details>
+            <summary class="summary">view more</summary>
+            <div>
+                <div class="menu-2">
+                    <img src="jacket-4.jpeg" class="img-2">
+                    <p class="menu-3">HERE&NOW<br>Full Sleeve Solid Men Jacket</p>
+                    <b class="price">rs- 1050/- <button class="btn">add to cart</button></b>
+                </div>
+                <div class="menu-2">
+                    <img src="jacket-5.jpeg" class="img-2">
+                    <p class="menu-3">WROGN<br>Full Sleeve Men Casual Jacket</p>
+                    <b class="price">rs- 1899/- <button class="btn">add to cart</button></b>
+                </div>
+                <div class="menu-2">
+                    <img src="jacket-3.jpeg" class="img-2">
+                    <p class="menu-3">PUMA<br>Full Sleeve Men Casual Jacket</p>
+                    <b class="price">rs- 2999/- <button class="btn">add to cart</button></b>
+                </div>
+            </div>
+        </details>
+    </div>
+    <div class="menu">
+        <div class="menu-1">Smart and Handy</div>
+
+        <div>
+            <div class="menu-2">
+                <img src="smartwatche-1.jpeg" class="img-2">
+                <p class="menu-3">BOAT<br>full and smart band</p>
+                <b class="price">rs- 3499/- <button class="btn">add to cart</button></b>
+            </div>
+            <div class="menu-2">
+                <img src="smartwatche-2.jpeg" class="img-2">
+                <p class="menu-3">BOAT<br>Smart band</p>
+                <b class="price">rs- 2999/- <button class="btn">add to cart</button></b>
+            </div>
+            <div class="menu-2">
+                <img src="smartwatche-3.jpeg" class="img-2">
+                <p class="menu-3">BOAT<br>wired headphones</p>
+                <b class="price">rs- 1499/- <button class="btn">add to cart</button></b>
+            </div>
+        </div>
+        <details>
+            <summary class="summary">view more</summary>
+            <div>
+                <div class="menu-2">
+                    <img src="smartwatche-4.jpeg" class="img-2">
+                    <p class="menu-3">BOAT<br>wired Earphones</p>
+                    <b class="price">rs- 999/- <button class="btn">add to cart</button></b>
+                </div>
+                <div class="menu-2">
+                    <img src="smartwatche-5.jpeg" class="img-2">
+                    <p class="menu-3">BOAT<br>classy wired earphone</p>
+                    <b class="price">rs- 1499/- <button class="btn">add to cart</button></b>
+                </div>
+                <div class="menu-2">
+                    <img src="smartwatche-6.jpeg" class="img-2">
+                    <p class="menu-3">JIO<br>Data card</p>
+                    <b class="price">rs- 999/- <button class="btn">add to cart</button></b>
+                </div>
+            </div>
+        </details>
+    </div>
+    <div class="menu">
+        <div class="menu-1">casual and formal shoes</div>
+
+        <div>
+            <div class="menu-2">
+                <img src="shoes-1.jpeg" class="img-2">
+                <p class="menu-3">PUMA<br>formal shoes</p>
+                <b class="price">rs- 3499/- <button class="btn">add to cart</button></b>
+            </div>
+            <div class="menu-2">
+                <img src="shoes-2.jpeg" class="img-2">
+                <p class="menu-3">REEBOK<br>casual shoes</p>
+                <b class="price">rs- 2999/- <button class="btn">add to cart</button></b>
+            </div>
+            <div class="menu-2">
+                <img src="shoes-3.jpeg" class="img-2">
+                <p class="menu-3">PUMA<br>smart boots</p>
+                <b class="price">rs- 1499/- <button class="btn">add to cart</button></b>
+            </div>
+        </div>
+        <details>
+            <summary class="summary">view more</summary>
+            <div>
+                <div class="menu-2">
+                    <img src="shoes-4.jpeg" class="img-2">
+                    <p class="menu-3">PUMA<br>casual shoes</p>
+                    <b class="price">rs- 999/- <button class="btn">add to cart</button></b>
+                </div>
+                <div class="menu-2">
+                    <img src="shoes-5.jpeg" class="img-2">
+                    <p class="menu-3">PUMA<br>smart and comfortable shoes</p>
+                    <b class="price">rs- 1499/- <button class="btn">add to cart</button></b>
+                </div>
+                <div class="menu-2">
+                    <img src="shoes-6.jpeg" class="img-2">
+                    <p class="menu-3">PUMA<br>smart shoes</p>
+                    <b class="price">rs- 999/- <button class="btn">add to cart</button></b>
+                </div>
+            </div>
+        </details>
+    </div>
+    <footer class="footer">
+        <div class="footer-main">
+            <email>care@maincentre.com</email>
+        </div>
+        <p class="inner-footer">we are highly delighted to serve you hassle free and faster shopping experience and also
+            thanks for your wonderful support</p>
+        <div class="footer-image">
+            <img src="facebook.png" class="img-1">
+            <img src="instagram.png" class="img-1">
+            <img src="twitter.png" class="img-1">
+        </div>
+        <div class="inner-footer1">
+            <tel>0141-4859944</tel>
+        </div>
+    </footer>
+</body>
+
+</html>
